@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{%block title%} home {% endblock title%}
+
+
+{%block body%}
+<div class="container ">
+    <img src="/static/Home.jpg" class="d-block w-100" height="450" alt="...">
+</div>
+<div class="container">
+    <form method="post" action="/home">
+    {%csrf_token%}
+<div class="mb-4 py-4">
+    <label for="Name" class="form-label text-center">Name</label>
+    <input type="text" class="form-control" id="Name" aria-describedby="Name">
+
+  </div>
+
+<select class="form-select mb-5" aria-label="Default select example">
+  <option selected>select your fav car</option>
+  <option value="1">Mercedes-Benz G-63 Amg</option>
+  <option value="2">Mercedes-Benz  maybach s class</option>
+  <option value="3">Mercedes-Benz  AMG SL</option>
+  <option value="3">mercedes-benz A class limousine</option>
+  <option value="3">Mercedes-Benz AMG GLE 53</option>
+   <div  class="form-text">We'll offer you the best cars.</div>
+</select>
+    <div class="mb-5">
+    <label for="Mobile no." class="form-label text-center">Mobile.no</label>
+    <input type="Integers" class="form-control" id="Mobile no." aria-describedby="Mobile.no">
+
+<div class="mb-5 py-5">
+    <label for="exampleInputEmail1" class="form-label text-center">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+    <button class="btn btn-primary" type="submit"  >Buy</button>
+  </div>
+
+</div>
+    </form>
+</div>
+{% endblock body%}
